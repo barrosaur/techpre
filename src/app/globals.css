@@ -1,0 +1,25 @@
+/* @import "tailwindcss"; */
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('../../public/Font/Josefin_Sans/JosefinSans-VariableFont_wght.ttf');
+}
+
+* {
+  font-family: 'Josefin Sans';
+}
+
+:root {
+  --background: #ffffff;
+  --header: #333366;
+  --header-hover: #282851;
+  --button1: #EAEFF7;
+  --button1-border: #12203F;
+  --button1-hover: #dee7f6;
+}
+
+body {
+  background: var(--background);
+  color: var(--header);
+  height: 100vh;
+  overflow: hidden;
+}
