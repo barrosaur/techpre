@@ -1,5 +1,98 @@
+.head-text {
+  border: 2px solid var(--button1-border);
+  width: 500px;
+  outline: none;
+  border-radius: 15px;
+  margin-top: -150px;
+}
+
 .head-text > h1 {
   font-weight: 500;
   font-size: 50px;
   text-align: center;
+}
+
+hr {
+  margin: 50px 0 20px;
+  outline: none;
+}
+
+form, .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  gap: 20px;
+  width: 80%;
+}
+
+.wrapper {
+  gap: 10px;
+}
+
+input {
+  width: 80%;
+  padding: 7px 20px;
+  outline: none;
+  border: none;
+}
+
+label {
+  font-family: Inter;
+  font-weight: bold;
+  color: var(--txt-color);
+}
+
+.email-grn {
+  background-color: var(--pstl-grn);
+  border: 1px solid var(--button1-border);
+  width: 89.3%;
+}
+
+.pw-prpl {
+  background-color: var(--pstl-prpl);
+}
+
+.conf-pw-blue {
+  background-color: var(--pstl-blue);
+}
+
+.signup-btn-container {
+  display: flex;
+  align-items: center;
+}
+
+.signup-btn-container > button {
+  padding: 5px 15px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid var(--header);
+  border-radius: 3px;
+  background-color: var(--button1);
+}
+
+.signup-btn-container > button:hover {
+  background-color: var(--button1-hover);
+}
+
+.red-msg {
+  color: var(--red);
+  margin: 0;
+}
+
+.view-pw {
+  display: flex;
+  border: 1px solid var(--button1-border);
+}
+
+.see-pass-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }

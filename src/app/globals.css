@@ -4,6 +4,11 @@
   src: url('../../public/Font/Josefin_Sans/JosefinSans-VariableFont_wght.ttf');
 }
 
+@font-face {
+  font-family: Inter;
+  src: url('../../public/Font/Inter/Inter-VariableFont_opsz\,wght.ttf');
+}
+
 * {
   font-family: 'Josefin Sans';
 }
@@ -15,6 +20,11 @@
   --button1: #EAEFF7;
   --button1-border: #12203F;
   --button1-hover: #dee7f6;
+  --txt-color: #000000;
+  --pstl-grn: #c5f5b7;
+  --pstl-prpl: #dbc1fc;
+  --pstl-blue: #c1e7fc;
+  --red: #c50a0a;
 }
 
 body {

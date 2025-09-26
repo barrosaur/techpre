@@ -16,12 +16,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 75px;
+  margin-top: 20px;
 }
 
 .left, .right {
   display: flex;
-  padding: 50px 45px;
+  padding: 0 45px;
+  height: 100vh;
 }
 
 .left {
