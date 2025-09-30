@@ -14,9 +14,9 @@ const Greeting = ({ onSignUp } : Greeting) => {
       </div>
 
       <div className="methods">
-        <button>Sign Up</button>
+        <button onClick={onSignUp}>Sign Up</button>
         <span>Already have an account? 
-          <span className='signin' onClick={onSignUp}> Sign in</span>
+          <span className='signin'> Sign in</span>
         </span>
       </div>
     </div>

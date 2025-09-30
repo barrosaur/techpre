@@ -15,7 +15,9 @@ export default function Home() {
       <HeaderSign/>
       <div className="child-1">
         <div className="left">
-          <Signup/>
+          {/* <Signup/> */}
+
+          {signup ? (<Signup/>): (<Greeting onSignUp={() => setSignup(true)}/> )}
         </div>
 
         <div className="right">
