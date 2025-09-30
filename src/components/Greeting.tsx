@@ -1,8 +1,11 @@
 import React from 'react';
 import '@/styles/Greeting.css';
-import Link from "next/link";
 
-const Greeting = () => {
+interface Greeting {
+  onSignUp: () => void
+}
+
+const Greeting = ({ onSignUp } : Greeting) => {
   return (
     <div className="home-signin">
       <div className="title-text">
@@ -13,7 +16,7 @@ const Greeting = () => {
       <div className="methods">
         <button>Sign Up</button>
         <span>Already have an account? 
-          <span className='signin'> Sign in</span>
+          <span className='signin' onClick={onSignUp}> Sign in</span>
         </span>
       </div>
     </div>

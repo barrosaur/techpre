@@ -10,13 +10,13 @@ body {
 .parent {
   width: 100%;
   height: 100vh;
+  margin: 0;
 }
 
 .child-1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
 }
 
 .left, .right {
@@ -34,9 +34,19 @@ body {
 
 .right {
   flex: 2;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -150px;
+  padding: 0;
 }
 
 .box {
   height: 100px;
   width: 200px;
+}
+
+.quote {
+  margin: 0;
+  font-size: 20px;
 }

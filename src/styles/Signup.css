@@ -3,51 +3,34 @@
   width: 500px;
   outline: none;
   border-radius: 15px;
-  margin-top: -150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .head-text > h1 {
-  font-weight: 500;
+  font-weight: 400;
+  margin: 15px;
   font-size: 50px;
-  text-align: center;
-}
-
-hr {
-  margin: 50px 0 20px;
-  outline: none;
-}
-
-form, .wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-form {
-  gap: 20px;
-  width: 80%;
-}
-
-.wrapper {
-  gap: 10px;
-}
-
-input {
-  width: 80%;
-  padding: 7px 20px;
-  outline: none;
-  border: none;
 }
 
 label {
+  color: var(--txt-color);
+  font-size: 18px;
   font-family: Inter;
   font-weight: bold;
-  color: var(--txt-color);
+}
+
+input {
+  outline: none;
+  padding: 10px 10px;
+  border: none;
 }
 
 .email-grn {
   background-color: var(--pstl-grn);
-  border: 1px solid var(--button1-border);
-  width: 89.3%;
 }
 
 .pw-prpl {
@@ -58,41 +41,68 @@ label {
   background-color: var(--pstl-blue);
 }
 
-.signup-btn-container {
+form {
+  padding: 20px 0;
   display: flex;
-  align-items: center;
-}
-
-.signup-btn-container > button {
-  padding: 5px 15px;
-  outline: none;
-  cursor: pointer;
-  border: 1px solid var(--header);
-  border-radius: 3px;
-  background-color: var(--button1);
-}
-
-.signup-btn-container > button:hover {
-  background-color: var(--button1-hover);
-}
-
-.red-msg {
-  color: var(--red);
-  margin: 0;
+  flex-direction: column;
+  margin-bottom: 10px;
+  gap: 5px;
 }
 
 .view-pw {
   display: flex;
-  border: 1px solid var(--button1-border);
+}
+
+.view-pw > input {
+  flex: 1;
+}
+
+.view-pw > button {
+  flex-shrink: 0;
 }
 
 .see-pass-btn {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: 0;
   outline: none;
   border: none;
+  border-radius: 0;
+  padding: 0;
   background-color: transparent;
-  cursor: pointer;
+}
+
+.see-pass-btn:hover {
+  background-color: transparent;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.signup-btn-container {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-btn-container > button {
+  padding: 15px 20px;
+  margin: 0;
+  outline: none;
+  border: none;
+  background-color: var(--header);
+  color: var(--background);
+  font-size: 18px;
+}
+
+.signup-btn-container > button:hover {
+  background-color: var(--header-hover);
+}
+
+.red-msg {
+  color: var(--red);
+  text-align: center;
 }

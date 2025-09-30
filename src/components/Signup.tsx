@@ -17,6 +17,8 @@ const Signup = () => {
     setConfirmPass("");
   }
 
+  // PREVENT COPY PASTING METHODS
+
   return (
     <div className="signup">
       <div className="head-text">
@@ -45,7 +47,7 @@ const Signup = () => {
               type={seePass ? "text" : "password"}
               placeholder='Enter your password' 
               className='pw-prpl'
-              value={password}
+              value={password}  
               onChange={e => setPassword(e.target.value)}
               required
             />
