@@ -1,31 +1,24 @@
-'use client'
-import React, { useState } from 'react';
-import '@/styles/Signup.css';
+'use client';
+import React, { useState } from 'react'
 import Image from 'next/image';
+import '@/styles/Signup.css';
 
-const Signup = () => {
+const Login = () => {
   const imgSize = 30;
-
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPass, setConfirmPass] = useState("")
-  const [seePass, setSeePass] = useState(false)
-
-  const clearInputs = () => {
-    setEmail("");
-    setPassword("");
-    setConfirmPass("");
-  }
+  const [seePass, setSeePass] = useState(false);
 
   const secureInput = (e: React.ClipboardEvent<HTMLInputElement>) => {
     e.preventDefault();
   }
 
   return (
-    <div className="signup">
+    <div className="login-container">
       <div className="head-text">
-        <h1>Sign Up with —</h1>
-        <h1>ALEC</h1>
+        <h1>Login to Just —</h1>
+        <h1>Just Study</h1>
       </div>
       <hr />
 
@@ -71,44 +64,14 @@ const Signup = () => {
           </div>
         </div>
 
-        <div className="wrapper">
-          <label htmlFor="">Confirm Password</label>
-          <div className="view-pw conf-pw-blue">
-            <input 
-              type={seePass ? "text" : "password"}
-              placeholder='Confirm password'
-              className='conf-pw-blue' 
-              value={confirmPass}
-              onChange={e => setConfirmPass(e.target.value)}
-              required
-              onCopy={secureInput}
-              onCut={secureInput}
-              onPaste={secureInput}
-            />
-            <button className='see-pass-btn' onClick={() => setSeePass(!seePass)}>
-              <Image
-                src={seePass ? "/images/eye-closed.svg" : "/images/eye-open.svg"}
-                height={imgSize}
-                width={imgSize}
-                alt={seePass ? "Close password" : 'See Password'}
-                className='see-pass'
-              />
-            </button>
-          </div>
-        </div>
-
-        {
-          (confirmPass !== password) && (
-            <p className="red-msg">Passwords do not match.</p>
-          )
-        }
-
         <div className="signup-btn-container">
-          <button onClick={clearInputs}>Sign up</button>
+          <button>Login</button>
         </div>
+
+        {/* Add logic if password or email is invalid account */}
       </form>
     </div>
   )
 }
 
-export default Signup
+export default Login

@@ -2,10 +2,11 @@ import React from 'react';
 import '@/styles/Greeting.css';
 
 interface Greeting {
-  onSignUp: () => void
+  onSignUp: () => void;
+  onSignIn: () => void;
 }
 
-const Greeting = ({ onSignUp } : Greeting) => {
+const Greeting = ({ onSignUp, onSignIn } : Greeting) => {
   return (
     <div className="home-signin">
       <div className="title-text">
@@ -16,7 +17,7 @@ const Greeting = ({ onSignUp } : Greeting) => {
       <div className="methods">
         <button onClick={onSignUp}>Sign Up</button>
         <span>Already have an account? 
-          <span className='signin'> Sign in</span>
+          <span className='signin' onClick={onSignIn}> Sign in</span>
         </span>
       </div>
     </div>
