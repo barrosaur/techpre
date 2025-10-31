@@ -5,7 +5,7 @@ import './page.css'
 
 // .add-btn - add functionality
 
-const main = () => {
+const Prompt = () => {
 
   return (
     <div className="main-page">
@@ -35,4 +35,4 @@ const main = () => {
   )
 }
 
-export default main
+export default Prompt

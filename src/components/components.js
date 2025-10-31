@@ -5,6 +5,7 @@ import Login from './Login';
 import Navbar from './Navbar';
 import NavbarBtn from './NavbarBtn';
 import ViewAllBtn from './ViewAllBtn';
+import Calendar from './Calendar'
 
 export {
   Greeting,
@@ -13,5 +14,6 @@ export {
   Login,
   Navbar,
   NavbarBtn,
-  ViewAllBtn
+  ViewAllBtn,
+  Calendar
 };
