@@ -8,24 +8,33 @@ interface NavBtnProp {
   label: string,
   iconDefault: string,
   iconHover: string,
-  location: string
+  location: string,
+  active: boolean,
+  setActive: (loc: string) => void
 }
 
-const NavbarBtn = ({label, iconDefault, iconHover, location} : NavBtnProp) => {
+const NavbarBtn = ({label, iconDefault, iconHover, location, active, setActive} : NavBtnProp) => {
   const [hover, setHover] = useState(false);
   const imgSize = 20;
   const router = useRouter();
 
+  const handleClick = () => {
+    setActive(location)
+    router.push(location)
+  }
+
+  const isHoverdOrActive = hover || active;
+
   return (
     <button
-      className='nav-btn'
+      className={`nav-btn ${active ? 'active' : ''}`}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      onClick={() => router.push(location)}
+      onClick={handleClick}
     >
 
       <Image
-        src={hover ? iconHover : iconDefault}
+        src={isHoverdOrActive ? iconHover : iconDefault}
         width={imgSize}
         height={imgSize}
         alt={label}
