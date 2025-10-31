@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { Navbar, ViewAllBtn } from '@/components/components'
 import './page.css'
 
+// .add-btn - add functionality
+
 const main = () => {
 
   return (
@@ -17,6 +19,9 @@ const main = () => {
             <h2>Reminders</h2>
             <ViewAllBtn/>
           </div>
+          <div className="list-holder">
+            <button className="add-btn">+</button>
+          </div>
         </div>
         
         <div className="second-level">
@@ -25,17 +30,26 @@ const main = () => {
               <h2>Folders</h2>
               <ViewAllBtn/>
             </div>
+            <div className="list-holder">
+              <button className="add-btn">+</button>
+            </div>
           </div>
           <div className="container">
             <div className="head">
               <h2>Friends</h2>
               <ViewAllBtn/>
             </div>
+            <div className="list-holder">
+              <button className="add-btn">+</button>
+            </div>
           </div>
           <div className="container">
             <div className="head">
               <h2>Groups</h2>
               <ViewAllBtn/>
+            </div>
+            <div className="list-holder">
+              <button className="add-btn">+</button>
             </div>
           </div>
         </div>

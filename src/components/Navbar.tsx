@@ -15,30 +15,35 @@ const Navbar = () => {
           label="Overview"
           iconDefault="/images/overview-white.svg"
           iconHover='/images/overview-prpl.svg'
+          location='/overview'
         />
 
         <NavbarBtn
           label='Prompt Me'
           iconDefault='/images/prompt-white.svg'
           iconHover='/images/prompt-prpl.svg'
+          location='/prompt'
         />
 
         <NavbarBtn
           label='Reminders'
           iconDefault='/images/reminder-white.svg'
           iconHover='/images/reminder-prpl.svg'
+          location='/reminders'
         />
 
         <NavbarBtn
           label='Share'
           iconDefault='/images/share-white.svg'
           iconHover='/images/share-prpl.svg'
+          location='/share'
         />
 
         <NavbarBtn
           label='Settings'
           iconDefault='/images/settings-white.svg'
           iconHover='/images/settings-prpl.svg'
+          location='/settings'
         />
       </div>
     </nav>

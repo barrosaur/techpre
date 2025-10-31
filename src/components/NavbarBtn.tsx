@@ -2,22 +2,26 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import '@/styles/Navbar.css'
+import { useRouter } from 'next/navigation'
 
 interface NavBtnProp {
   label: string,
   iconDefault: string,
-  iconHover: string
+  iconHover: string,
+  location: string
 }
 
-const NavbarBtn = ({label, iconDefault, iconHover} : NavBtnProp) => {
+const NavbarBtn = ({label, iconDefault, iconHover, location} : NavBtnProp) => {
   const [hover, setHover] = useState(false);
   const imgSize = 20;
+  const router = useRouter();
 
   return (
     <button
       className='nav-btn'
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
+      onClick={() => router.push(location)}
     >
 
       <Image
